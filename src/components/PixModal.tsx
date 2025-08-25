@@ -177,7 +177,7 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
       {!pixData ? (
         <div className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cpf">Digite seu CPF para gerar o PIX e identificarmos seu reembolso.</Label>
+            <Label htmlFor="cpf">Digite seu CPF para gerar o PIX e liberar seu Kit de Furadeira Multifuncional.</Label>
             <Input
               ref={cpfInputRef}
               id="cpf"
@@ -190,7 +190,7 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="pixKey">Digite sua chave PIX para reembolso dos valores após a confirmação:</Label>
+            <Label htmlFor="pixKey">Digite sua chave PIX para reembolso dos valores após a confirmação do pagamento:</Label>
             <Input
               id="pixKey"
               type="text"
