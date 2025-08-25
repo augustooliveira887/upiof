@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { PixModal } from "@/components/PixModal";
 import { useState, useEffect } from "react";
 
@@ -112,37 +113,45 @@ const Index = () => {
             </div>
 
             {/* Resumo */}
-            <div className="bg-white rounded-lg p-5">
-              <h2 className="text-xl font-bold mb-3">Resumo</h2>
-              <hr className="border-gray-300 mb-4"/>
-              
-              <div className="flex justify-between mb-4">
-                <span className="text-base">Valor do produto</span>
-                <strong className="text-xl">R$69,00</strong>
-              </div>
+            <Card>
+              <CardHeader>
+                <CardTitle>Resumo</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-base">Valor do produto</span>
+                  <strong className="text-xl">R$69,00</strong>
+                </div>
 
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-base">Valor a ser pago (TPS)</span>
-                <strong className="text-red-600 text-xl">- R$35,65</strong>
-              </div>
-              <p className="text-red-600 text-sm mb-4">
-                *(Reembolsado após Aprovação e Liberação do Produto)
-              </p>
+                <hr className="border-border"/>
 
-              <hr className="border-gray-300 mb-4"/>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-base">Valor a ser pago (TPS)</span>
+                    <strong className="text-red-600 text-xl">- R$35,65</strong>
+                  </div>
+                  <p className="text-red-600 text-sm">
+                    *(Reembolsado após Aprovação e Liberação do Produto)
+                  </p>
+                </div>
 
-              <div className="flex justify-between font-bold text-xl mb-4">
-                <span>Valor total do produto</span>
-                <span>R$69,00</span>
-              </div>
+                <hr className="border-border"/>
 
-              <div className="flex gap-3 items-start">
-                <span className="text-gray-500 text-lg">❗</span>
-                <p className="text-base text-gray-700 m-0">
-                  O produto no valor de R$69,00 será liberado imediatamente após a confirmação do pagamento.
-                </p>
-              </div>
-            </div>
+                <div className="flex justify-between items-center font-bold text-xl">
+                  <span>Valor total do produto</span>
+                  <span>R$69,00</span>
+                </div>
+
+                <hr className="border-border"/>
+
+                <div className="flex gap-3 items-start">
+                  <span className="text-muted-foreground text-lg">❗</span>
+                  <p className="text-base text-muted-foreground">
+                    O produto no valor de R$69,00 será liberado imediatamente após a confirmação do pagamento.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Botão Principal */}
             <Button 
