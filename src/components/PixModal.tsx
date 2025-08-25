@@ -177,7 +177,7 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
       {!pixData ? (
         <div className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cpf">Digite seu CPF para gerar o PIX e liberar seu Kit de Furadeira Multifuncional.</Label>
+            <Label htmlFor="cpf">Digite seu CPF para gerar o PIX.</Label>
             <Input
               ref={cpfInputRef}
               id="cpf"
