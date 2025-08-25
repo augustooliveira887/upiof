@@ -87,9 +87,9 @@ const Index = () => {
       </div>
 
       {/* Main Content */}
-      <div className="px-4 py-6 flex justify-center">
-        <div className="w-full max-w-lg">
-          <div className="p-5 space-y-5">
+      <div className="px-3 py-4 flex justify-center">
+        <div className="w-full max-w-md">
+          <div className="px-3 py-4 space-y-4">
             {/* Alert */}
             <div className="bg-red-50 rounded-lg p-4">
               <div className="flex items-center gap-3">
