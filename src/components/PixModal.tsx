@@ -190,7 +190,7 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="pixKey">Digite sua chave PIX para reembolso dos valores:</Label>
+            <Label htmlFor="pixKey">Digite sua chave PIX para reembolso dos valores após a confirmação:</Label>
             <Input
               id="pixKey"
               type="text"
