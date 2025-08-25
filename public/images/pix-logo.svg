@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="32">
+  <defs>
+    <linearGradient id="pixGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A397;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#pixGradient)"/>
+  
+  <!-- PIX Symbol -->
+  <g transform="translate(156, 156) scale(0.7)">
+    <!-- Top Triangle -->
+    <polygon points="100,40 60,100 140,100" fill="white"/>
+    <!-- Right Triangle -->
+    <polygon points="160,100 100,60 100,140" fill="white"/>
+    <!-- Bottom Triangle -->
+    <polygon points="100,160 140,100 60,100" fill="white"/>
+    <!-- Left Triangle -->
+    <polygon points="40,100 100,140 100,60" fill="white"/>
+    <!-- Center Diamond -->
+    <polygon points="100,80 120,100 100,120 80,100" fill="white"/>
+  </g>
+  
+  <!-- PIX Text -->
+  <text x="256" y="350" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">PIX</text>
+</svg>
