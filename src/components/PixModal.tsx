@@ -189,6 +189,10 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
             />
           </div>
           
+          <div className="text-sm text-muted-foreground">
+            Valor: <span className="font-semibold text-foreground">R$ 35,65</span>
+          </div>
+          
           <div className="space-y-2">
             <Label htmlFor="pixKey">Digite sua chave PIX para reembolso do valor (R$71,30) após a confirmação do pagamento:</Label>
             <Input
@@ -200,29 +204,23 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
             />
           </div>
           
-          <div className="flex flex-col gap-2">
-            <div className="text-sm text-muted-foreground">
-              Valor: <span className="font-semibold text-foreground">R$ 35,65</span>
-            </div>
-            
-            <Button 
-              onClick={generatePix} 
-              disabled={loading}
-              className="w-full"
-            >
-              {loading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Gerando PIX...
-                </>
-              ) : (
-                <>
-                  <QrCode className="mr-2 h-4 w-4" />
-                  Gerar PIX
-                </>
-              )}
-            </Button>
-          </div>
+          <Button 
+            onClick={generatePix} 
+            disabled={loading}
+            className="w-full"
+          >
+            {loading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Gerando PIX...
+              </>
+            ) : (
+              <>
+                <QrCode className="mr-2 h-4 w-4" />
+                Gerar PIX
+              </>
+            )}
+          </Button>
         </div>
       ) : (
         <div className="space-y-4">
