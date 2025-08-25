@@ -14,6 +14,7 @@ declare global {
 
 const Index = () => {
   const [isPixModalOpen, setIsPixModalOpen] = useState(false);
+  const [capturedUtms, setCapturedUtms] = useState<Record<string, string>>({});
 
   useEffect(() => {
     // Detecta se deve abrir o modal PIX pela URL
@@ -73,6 +74,7 @@ const Index = () => {
 
     const utms = captureUtms();
     console.log('LEK DO BLACK: Abrindo modal PIX com UTMs:', utms);
+    setCapturedUtms(utms);
     setIsPixModalOpen(true);
   };
 
@@ -206,7 +208,8 @@ const Index = () => {
       
       <PixModal 
         isOpen={isPixModalOpen} 
-        onClose={() => setIsPixModalOpen(false)} 
+        onClose={() => setIsPixModalOpen(false)}
+        utms={capturedUtms}
       />
     </div>
   );

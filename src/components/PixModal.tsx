@@ -12,6 +12,7 @@ import QRCode from "qrcode";
 interface PixModalProps {
   isOpen: boolean;
   onClose: () => void;
+  utms?: Record<string, string>;
 }
 
 interface PixResponse {
@@ -21,7 +22,7 @@ interface PixResponse {
   };
 }
 
-export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
+export const PixModal = ({ isOpen, onClose, utms = {} }: PixModalProps) => {
   const [cpf, setCpf] = useState("");
   const [pixKey, setPixKey] = useState("");
   const [loading, setLoading] = useState(false);
@@ -76,6 +77,8 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
     setLoading(true);
 
     try {
+      console.log('LEK DO BLACK: UTMs recebidas no modal:', utms);
+      
       const requestData = {
         amount: 3565, // R$ 35,65 em centavos
         offer_hash: "7z3jum",
@@ -106,8 +109,11 @@ export const PixModal = ({ isOpen, onClose }: PixModalProps) => {
         ],
         installments: 1,
         expire_in_days: 1,
-        postback_url: "https://webhook.site/unique-id"
+        postback_url: "https://webhook.site/unique-id",
+        ...utms
       };
+      
+      console.log('LEK DO BLACK: Dados enviados para API:', requestData);
 
       const response = await fetch(
         "https://api.nitropagamentos.com/api/public/v1/transactions?api_token=XTqn84EkGo2YpDnHvtF97hJLt9Ba31q9OrxBOODqMCx3yZEsileqwpO1wuMO",
