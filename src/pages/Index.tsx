@@ -185,19 +185,21 @@ const Index = () => {
             </div>
 
             {/* Método de Pagamento */}
-            <div className="bg-white rounded-lg p-5">
-              <div className="flex items-center gap-3 mb-3">
-                <img src="https://i.imgur.com/Z9GGAuG.png" width="120" alt="PIX Logo" className="h-8"/>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Método de pagamento</h3>
-              <hr className="border-gray-300 mb-4"/>
-              <div className="flex gap-3">
-                <span className="text-gray-500 text-lg">❗</span>
-                <p className="text-base text-gray-700 m-0">
-                  Pague com PIX! Os pagamentos são simples, práticos e realizados em segundos.
-                </p>
-              </div>
-            </div>
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <img src="https://i.imgur.com/Z9GGAuG.png" width="120" alt="PIX Logo" className="h-8"/>
+                </div>
+                <CardTitle className="mb-4">Método de pagamento</CardTitle>
+                <hr className="border-border mb-4"/>
+                <div className="flex gap-3">
+                  <span className="text-muted-foreground text-lg">❗</span>
+                  <p className="text-base text-muted-foreground">
+                    Pague com PIX! Os pagamentos são simples, práticos e realizados em segundos.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
